@@ -13,7 +13,7 @@ def create_project_hash
   
   projects = {}
   
-  kickstarter.css(li.project.grid_4).each do |project|
+  kickstarter.css("li.project.grid_4").each do |project|
     title = project.css("h2.bbcard_name strong a")
     projects[title.to_sym] = {
       :image_link => project.css("div.project-thumbnail a img").attribute("src").value,
